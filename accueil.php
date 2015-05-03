@@ -11,8 +11,6 @@ if ($test == 2){
 include_once 'PHP/connexion.php';
 }
 
-
-
 ?>
 
 <!-- Page d'acueil du site Web de la maison des ligues avec
