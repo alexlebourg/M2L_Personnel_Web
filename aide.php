@@ -43,14 +43,8 @@ session_start();
 		    		<li><a id="lienEmploye" href="#conn">Connexion</a></li>
 		    		<li><a id="lienEmploye" href="#navig">Menu</a></li>
 		    		<li><a id="lienEmploye" href="#leg">Mentions Légales</a></li>
-		    		<li><a id="lienEmploye" href="#formation">Accès aux formations</a></li>
 		    		<li><a id="lienEmploye" href="#infoPerso">Accès aux informations personnelles</a></li>
-		    		<li><a id="lienEmploye" href="#respon">Vous êtes responsable : Consultez les formations de vos employés</a></li>
-		    		<li><a id="lienEmploye" href="#rh">Vous êtes au service RH : Gérez les formations</a>
-		    			<ul><li><a id="lienEmploye" href="#ajout">Ajouter une formation</a></li>
-		    				<li><a id="lienEmploye" href="#affecte">Affecter une formation à un employé</a></li>
-		    			</ul>
-		    		</li>
+		    		<li><a id="lienEmploye" href="#respon">Vous êtes administrateur : Gérer votre ligue</a></li>
 		    	</ol>
 		    	
 		    	<br><br>
@@ -63,12 +57,13 @@ session_start();
 			    <br><br>
 			    <p>
 			    	<h2 id="navig">Menu</h2>
-			    	Le menu présente les principaux liens de navigation du site :
+			    	Le menu présente les principaux liens de navigation du site : 
 			    	<br><b>- Accueil :</b> renvoie à la page d'accueil
-			    	<br><b>- Formations:</b> détail des heures de CPF et la liste des formations faites
 			    	<br><b>- Compte :</b> regroupe les données personnelles de l'utilisateur
-				    <p><img id="image" src="aideImage/Menu.png" width="80%" alt="Photo non chargée" title="Menu.png"></p>
-			    </p>
+				    <p><img id="image" src="aideImage/MenuEmploye.png" width="80%" alt="Photo non chargée" title="MenuEmploye.png"></p>				    
+				    <br>Si vous êtes un administrateur de ligue, un lien <b>"Utilisateurs"</b> s'ajoute afin de donner accès aux informations des membres de votre ligue
+					<p><img id="image" src="aideImage/MenuAdministrateur.png" width="80%" alt="Photo non chargée" title="MenuAdministrateur.png"></p>
+				    </p>
 			    <br><br>
 			    <p>
 				    <h2 id="leg">Mentions légales</h2>
@@ -76,54 +71,29 @@ session_start();
 				    <p><img id="image" src="aideImage/Footer.png" width="90%" alt="Photo non chargée" title="Footer.png"></p>
 			    </p>
 			    <br><br>
-			    <p>
-				    <h2 id="formation">Formations</h2>
-			    	Pour accéder à la liste de vos formations, cliquer sur <b>"Formations"</b> dans le menu.<br>
-			    	Vous optiendrez en premier lieu le récapitulatif de votre Compteur Personnel de Formations (CPF) :
-			    	<p><img id="image" src="aideImage/RecapCPF.png" alt="Photo non chargée" title="RecapCPF.png"></p>
-			    	Puis la liste de vos formations effectuées :
-				    <p><img id="image" src="aideImage/ListeFormations.png" width="80%"  alt="Photo non chargée" title="ListeFormations.png"></p>
-			    </p>
 			    
 			    <p>
 				    <h2 id="infoPerso">Informations Personnelles</h2>
 			    	Pour accéder à vos informations personnelles, cliquer sur <b>"Compte"</b> dans le menu.<br>
-			    	Vous optiendrez un premier tableau avec le récapitulatif de votre entreprise et votre représentant puis les informations vous concernant :
-			    	<p><img id="image" src="aideImage/DonneesPerso.png" alt="Photo non chargée" title="DonneesPerso.png"></p>
+			    	Vous optiendrez un tableau avec vos informations et la possibilité de modifier votre mot de passe :
+			    	<p><img id="image" src="aideImage/Compte.png" alt="Photo non chargée" title="DonneesPerso.png"></p>
 		    	</p>
 			    <br><br>
 			    <p>
-			    	<h2 id="respon">Consultation des formations de vos employés</h2>
-			    	Etant responsable de votre service, vous avez accès à la lecture des formations de vos employés.
-			    	<br>Pour cela, aller dans la rubrique de vos formations, sous les deux premiers tableaux récapitulant vos données de formations, un affichage supplémentaire présente les employés sous votre responsabilité :
-			    	<p><img id="image" src="aideImage/ListeEmployeResponsable.png" alt="Photo non chargée" title="ListeEmployeResponsable.png"></p>
-			    	Cliquer sur un employé et vous optiendrez le détail de celui-ci : ces informations, le récaptulatif des CPF et la liste de ses foramtions
-			    	<p><img id="image" src="aideImage/DetailEmploye.png" height="90%" width="90%" alt="Photo non chargée" title="DetailEmploye.png"></p>
+			    	<h2 id="respon">Gérer votre ligue</h2>
+			    	Etant administrateur de votre ligue, vous en avez accès à la liste des membres.
+			    	<br>Pour cela, aller dans la rubrique <b>"Utilisateur"</b>, un tableau listera tous les membres de votre ligue :
+			    	<p><img id="image" src="aideImage/ListeUtilisateur.png" width="90%" alt="Photo non chargée" title="ListeUtilisateur.png"></p>
+			    	Pour supprimer un membre, choisissez la personne dans la liste déroulante et cliquer sur "Supprimer".
+			    	<p><img id="image" src="aideImage/SupprAjoutUtilisateur.png" alt="Photo non chargée" title="SupprAjoutUtilisateur.png"></p>
+			    	Pour en ajouter un, cliquer sur "Ajouter un membre", remplissez le formulaire puis validez.
+			    	<p><img id="image" src="aideImage/FormulaireAjoutMembre.png" alt="Photo non chargée" title="FormulaireAjoutMembre.png"></p>
+			    	Pour modifier un membre, choisissez la personne dans la liste déroulante et cliquer sur "Modifier".
+			    	<p><img id="image" src="aideImage/ModifierUtilisateur.png" alt="Photo non chargée" title="ModifierUtilisateur.png"></p>
+			    	Mettez à jour le formulaire pré-rempli, puis validez.
+			    	<p><img id="image" src="aideImage/FormulaireModifierMembre.png" alt="Photo non chargée" title="FormulaireModifierMembre.png"></p>
 		    	</p>
-		    	<br><br>
-			    <p>
-			    	<h2 id="rh">Service Ressources Humaines</h2>
-			    	Etant au service des Ressources Humaines, vous devez gérer les demandes de formations. Vous avez donc accès aux formations de tous les employés.
-			    	Pour les consulter, aller dans la rubrique de vos formations, sous les deux premiers tableaux récapitulant vos données de formations, un affichage supplémentaire présente la liste de tous les employés en 2 catégories (salariés et responsabes) :
-			    	<p><img id="image" src="aideImage/ListeEmployesRH.png" alt="Photo non chargée" title="ListeEmployesRH.png"></p>
-			    	<p>
-			    		<h2 id="ajout">Ajouter une formation</h2>
-			    		Au bas de la page, au-dessous des listes listes d'employé, vous trouverez la rubrique ajouter une formation.
-			    		<p><img id="image" src="aideImage/BoutonAjoutForma.png" alt="Photo non chargée" title="ListeEmployesRH.png"></p>
-			    		Cliquer sur "Nouvelle Formation". Vous serez redirigé vers le formulaire d'ajout : 
-			    		<p><img id="image" src="aideImage/FormulaireAjoutFormation.png" alt="Photo non chargée" title="FormulaireAjoutFormation.png"></p>
-			    		Validez, la formation est ajoutée.
-			    	</p>
-			    	<p>
-			    		<h2 id="affecte">Affecter une formation à un employé</h2>
-			    		Pour affecter une formation à un employé, celle-ci doit déjà exister. Dans le cas contraire, entrez la formation en suivant les instructions de la rubrique "<a id="lienEmploye" href="#ajout"<i><u>Ajouter une formation</u></i></a>".
-			    		<br>Ensuite, allez sur la page de l'employé souhaité. Pour celà, cliquez sur un nom dans la liste. Au bas de la page, sous les informations de l'employé, cliquez sur "Affecter une formation". Le formulaire suivant s'affiche :
-			    		<p><img id="image" src="aideImage/AffecteFormation.png" alt="Photo non chargée" title="AffecteFormation.png"></p>
-			    		Selectionnez la formation dans la liste, entrez la date, puis validez.<br>La formation a été affectée à l'employé.
-			    	</p>
-			    	
 			    
-			    </p>
 		    </div>
 		    <?php include 'presentation/footer.php';?>
     	</div>
