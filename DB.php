@@ -95,7 +95,7 @@ function Ligue()
 }
 
 
-//Select récupérant les formations de l'utilisateur connecté
+//Select récupérant les membre de la ligue de l'utilisateur connecté
 
 function Membres(){
 	//connection a la base
@@ -114,7 +114,7 @@ function Membres(){
 
 }
 
-//Select Modifiant le Password de l'utilisateur connecté
+//UPDATE Modifiant le Password de l'utilisateur connecté
 
 function ChangePass(){
 	//connection a la base
@@ -209,4 +209,4 @@ function ModifieMembre(){
 	}
 
 }
-?>	
+?>		

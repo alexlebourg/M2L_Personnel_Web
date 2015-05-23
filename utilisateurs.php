@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once 'DB.php';
 
 //redirection 
 
@@ -10,19 +11,28 @@ if ($_SESSION['responsable'] == 0)
 
 //formulaires
 
-if ($_GET['supprime']==1)
+if (!empty($_GET['supprime']))
 {
-	include_once 'PHP/supprimeMembres.php';
+	if ($_GET['supprime']==1)
+	{
+		include_once 'PHP/supprimeMembres.php';
+	}
 }
 
-if ($_GET['ajout']==1)
+if (!empty($_GET['ajout']))
 {
-	include_once 'PHP/ajoutMembre.php';
+	if ($_GET['ajout']==1)
+	{
+		include_once 'PHP/ajoutMembre.php';
+	}
 }
 
-if ($_GET['modifie']==1)
-{
-	include 'PHP/insertionModifMembre.php';
+if (!empty($_GET['modifie']))
+{	
+	if ($_GET['modifie']==1)
+	{
+		include 'PHP/insertionModifMembre.php';
+	}
 }
 
 ?>
@@ -80,7 +90,7 @@ if ($_GET['modifie']==1)
 	    		foreach ($liste as $ligne) { ?>
 	    		<tr>
 	    			<td>
-	    				<?php echo $ligne['nom'];?>
+	    				<?php echo $ligne['nom']; ?>
 	    			</td>
 	    			<td>
 	    				<?php echo $ligne['prenom'];?>
@@ -100,7 +110,7 @@ if ($_GET['modifie']==1)
 						<select name="listeMembres" id="listeMembres">
 							<?php $liste = Membres();
 		    					foreach ($liste as $ligne) {?>
-									<option  value="<?php echo $ligne['idUtilisateur'] ?>"><?php $ligne['idUtilisateur'] = $_SESSION['idMembre']; echo $ligne['nom']." ".$ligne['prenom'];?></option>
+									<option  value="<?php echo $ligne['idUtilisateur'] ?>"><?php $_SESSION['idMembre'] = $ligne['idUtilisateur']; echo $ligne['nom']." ".$ligne['prenom'];?></option>
 							<?php }?>
 						</select>
 						<input type="submit" value="Supprimer">
